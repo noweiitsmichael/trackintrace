@@ -1,2 +1,16 @@
 
 @import "ember-bootstrap/bootstrap";
+
+.header {
+  background-color: #4682B4;
+  padding: 10px 20px;
+  color: white;
+
+  .name {
+    font-size: 24px;
+  }
+
+  .catch-phrase {
+    font-style: italic;
+  }
+}
