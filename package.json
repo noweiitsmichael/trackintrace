@@ -9,6 +9,6 @@
     "npm": "3.10.10"
   },
   "scripts": {
-    "postinstall": "./node_modules/bower/bin/bower install"
+    "postinstall": "./bin/heroku_install"
   }
 }
