@@ -1,0 +1,35 @@
+<div class="results-table">
+  <div class="results-headers results-row">
+    <div class="head field bl">B/L Number</div>
+    <div class="head field steam">Steamship Line</div>
+    <div class="head field orig">Origin</div>
+    <div class="head field dest">Destination</div>
+    <div class="head field vessel">Vessel</div>
+    <div class="head field voyage">Voyage</div>
+    <div class="head field eta">ETA</div>
+    <div class="head field containers">Containers</div>
+  </div>
+  {{#each searchResults as |result index|}}
+    <div class="results-row" {{action "goToDetails" result.bl_number}}>
+      <div class="field bl">{{result.bl_number}}</div>
+      <div class="field steam">{{result.steamship_line}}</div>
+      <div class="field orig">{{result.origin}}</div>
+      <div class="field dest">{{result.destination}}</div>
+      <div class="field vessel">{{result.vessel}}</div>
+      <div class="field voyage">{{result.voyage}}</div>
+      <div class="field eta">{{result.eta}}</div>
+      <div class="field containers">
+        {{#each result.containers as |container|}}
+          <div class="container">
+            <div class="size">
+              <div class="container-{{container.size}}">{{container.size}}</div>
+            </div>
+            <div class="type">{{container.type}}</div>
+            <div class="number">{{container.number}}</div>
+          </div>
+        {{/each}}
+      </div>
+    </div>
+  {{/each}}
+
+</div>

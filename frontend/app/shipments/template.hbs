@@ -1,0 +1,16 @@
+{{outlet}}
+
+<div class="results-table">
+  <div class="results-headers results-row">
+    <div class="head field bl">Date</div>
+    <div class="head field">Description</div>
+    <div class="head field orig">Location</div>
+  </div>
+{{#each statusUpdates as |update index|}}
+    <div class="results-row">
+      <div class="field bl">{{update.date}}</div>
+      <div class="field">{{update.description}}</div>
+      <div class="field orig">{{update.location}}</div>
+    </div>
+  {{/each}}
+  </div>
