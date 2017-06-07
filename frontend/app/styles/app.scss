@@ -14,6 +14,7 @@ body {
   color: white;
   font-size: 100px;
 }
+
 .search {
   font-family: 'Raleway', sans-serif;
   display: flex;
@@ -96,9 +97,15 @@ body {
   border-radius: 3px;
   overflow: hidden;
 
-  .results-row.results-headers {
+  .download {
+    align-self: flex-end;
+    padding: 5px 15px;
     background-color: #28415F;
-    color: #5B789D;
+    border-radius: 2px;
+    color: lightgrey;
+    box-shadow: initial;
+    border: initial;
+    margin-bottom: 10px;
   }
 
   .results-row {
@@ -107,8 +114,9 @@ body {
     .field {
       width: 300px;
       border: 1px solid #28415F;
-      color: #5B789D;
+      color: #849ebf;
       padding: 10px 15px;
+      flex-grow: 1;
     }
     .bl {
       width: 180px;
@@ -132,7 +140,6 @@ body {
       width: 160px;
     }
     .container {
-      flex: 1;
       width: 250px;
     }
 
@@ -142,9 +149,20 @@ body {
     }
   }
 
+  .results-row.results-headers {
+    background-color: #28415F;
+    color: #849ebf;
+    cursor: initial !important;
+
+    .containers {
+      min-width: 260px;
+    }
+  }
+
   .field.containers {
     display: flex;
     flex-direction: column;
+    flex-grow: 1;
 
     .container {
       display:flex;
